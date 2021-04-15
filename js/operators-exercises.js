@@ -3,6 +3,7 @@ console.log('1' + 2); //3
 console.log(typeof('1' + 2)); //number
 console.log(6%4); //2
 console.log('3 + 4 is ' + 3 + 4); //error
+//fix console.log('3 + 4 is ' + (3 + 4));
 console.log(0 < 0);
 console.log('false' == false); //true
 console.log(true == 'true'); //true
