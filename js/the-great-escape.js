@@ -13,7 +13,7 @@
 	function getDogName() {
 		return prompt("What is your dog's name?");
 	}
-	console.log(getDogsName());
+	console.log(getDogName());
 
 	function playTheGreatEscape() {
 		//get all the info
@@ -22,7 +22,7 @@
 		var contactInfo = getContactInfo();
 		//start searching
 		alert("Time to search for this doggo");
-		seachForDog(dogName, dogKind, contactInfo);
+		searchForDog(dogName, dogKind, contactInfo);
 	}
 	function searchForDog(dogName, dogKind, contactInfo) {
 		//see a dog
