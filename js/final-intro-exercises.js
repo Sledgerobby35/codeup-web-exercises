@@ -50,23 +50,23 @@
 // console.log(!!"false"); //E:true A:true
 // console.log(!!"0"); //E:false A:true
 
-// var sample = "Hello Codeup";
-// var length = sample.length;
-// console.log(length);
-// var sampleUpperCase = sample.toUpperCase();
-// var sampleLowerCase = sample.toLowerCase();
-// console.log(sampleUpperCase);
-// console.log(sampleLowerCase);
-// sample += " " + "Students";
-// console.log(sample);
-// sample = sample.replace("Students","Class");
-// console.log(sample);
-// var c = sample.indexOf("c");
-// console.log(c);
-// var C = sample.indexOf("C");
-// console.log(C);
-// var subSample = sample.substring(6,12);
-// console.log(subSample);
+var sample = "Hello Codeup";
+var length = sample.length;
+console.log(length);
+var sampleUpperCase = sample.toUpperCase();
+var sampleLowerCase = sample.toLowerCase();
+console.log(sampleUpperCase);
+console.log(sampleLowerCase);
+sample += " " + "Students";
+console.log(sample);
+sample = sample.replace("Students","Class");
+console.log(sample);
+var c = sample.indexOf("c");
+console.log(c);
+var C = sample.indexOf("C");
+console.log(C);
+var subSample = sample.substring(sample.indexOf("C"), sample.indexOf("p"));
+console.log(subSample);
 
 // const movies = {
 //     price: 3,
@@ -134,6 +134,11 @@
 
 var username = 'codeup';
 var password = 'notastrongpassword';
-var passCheck = (password.includes(username) === false && password.length > 5);
+var passCheck = (password.includes(username) === false
+    && password.length > 5);
 var userCheck = (username.length < 20);
-var whiteSpace = (username.includes(" ") === false && password.includes(" ") === false);
+var whiteSpace = (username.includes(" ") === false
+    && password.includes(" ") === false);
+console.log(passCheck);
+console.log(userCheck);
+console.log(whiteSpace);
