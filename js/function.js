@@ -78,12 +78,12 @@
 	 * prompt the user for the bill total and a percentage they would like to tip,
 	 * then display the dollar amount they should tip
 	 */
-	 function displayTipAmount(total, tipDecimal) {
-	 	total = prompt("Input Total bill amount below");
-	 	tipDecimal = prompt("Please input, in decimal form, the percentage you wish to tip");
-		alert("Your tip amount is: $" + calcualteTip(tipDecimal, total));
-	 }
-	displayTipAmount();
+	 // function displayTipAmount(total, tipDecimal) {
+	 // 	total = prompt("Input Total bill amount below");
+	 // 	tipDecimal = prompt("Please input, in decimal form, the percentage you wish to tip");
+		// alert("Your tip amount is: $" + calcualteTip(tipDecimal, total));
+	 // }
+	// displayTipAmount();
 	/**
 	 * TODO:
 	 * Create a function named `applyDiscount`. This function should accept a price
@@ -100,9 +100,8 @@
 	 */
 var randomDiscount = Math.random();
 function applyDiscount(priceOfItem, discountPercentage = 0) {
-	var result = 0
-	discountPercentage = randomDiscount.toFixed(2);
-	result = priceOfItem * discountPercentage;
+	discountPercentage = randomDiscount;
+	var result = priceOfItem * discountPercentage;
 	return priceOfItem - result;
 }
 
