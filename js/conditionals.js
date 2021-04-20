@@ -128,11 +128,11 @@
 	 * and alerts to display to the user what their lucky number was, what their
 	 * price before the discount was, and what their price after the discount is.
 	 */
-// Generate a random number between 0 and 6
-//  	var luckyNumber = Math.floor(Math.random() * 6);
-// 	var totalBill = prompt("What was the total of the bill?")
-// 	alert("Your Lucky number was: " + luckyNumber);
-// 	alert("After applying discount you will only be paying: " + calculateTotal(luckyNumber, totalBill));
+//Generate a random number between 0 and 6
+ 	var luckyNumber = Math.floor(Math.random() * 6);
+	var totalBill = prompt("What was the total of the bill?")
+	alert("Your Lucky number was: " + luckyNumber  + "\nBefore applying discount total is: $" + totalBill);
+	alert("After applying discount you will only be paying: $" + calculateTotal(luckyNumber, totalBill));
 	/**
 	 * TODO:
 	 * Write some JavaScript that uses a `confirm` dialog to ask the user if they
@@ -167,10 +167,12 @@
 		}
 	}
 	function isNumber(string) {
-		if(typeof(Number(string)) === "number") {
-			return true;
-		} else {
+		console.log(Number(string) + 3);
+		if(isNaN(Number(string))) {
 			alert("Please enter a number instead");
+			return false;
+		} else {
+			return true;
 		}
 	}
 	function userInteract() {
@@ -180,6 +182,8 @@
 				alert(numberIsEvenOrOdd(userNumber));
 				alert(plus100(userNumber));
 				alert(isPositiveOrNegative(userNumber));
+			} else {
+				userInteract();
 			}
 		}
 	}
