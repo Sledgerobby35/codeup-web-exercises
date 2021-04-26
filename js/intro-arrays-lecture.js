@@ -49,7 +49,7 @@
 // }
 // loopArray(objectsArray);
 
-	objectsArray.forEach(function(object)) {
-		console.log("The Current user is: " + object);
-	}
+	// objectsArray.forEach(function(object)) {
+	// 	console.log("The Current user is: " + object);
+	// }
 })();
