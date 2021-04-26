@@ -1,9 +1,11 @@
 "use strict";
 
-// var i = 1;
-// while(i < 65536) {
-// 	console.log(i += i);
+// function addNumToItself(num) {
+// 	while(num < 65536) {
+// 		console.log(num += num);
+// 	}
 // }
+// addNumToItself(2);
 
 // // TODO: MINI EXERCISES
 // // TODO: print all even numbers between 0 and 25;
@@ -34,22 +36,45 @@
 // 	checkPassword();
 // }
 
-var allCones = Math.floor(Math.random() * 50) + 50;
-console.log(allCones);
-do {
-	var custSelect = Math.floor(Math.random() * 5) + 1;
-	if(allCones - custSelect > 0) {
-		console.log(`Selling ${custSelect} Cones`);
-		allCones = allCones - custSelect;
-		console.log(`We now have ${allCones} cones left`);
-	} else if(allCones - custSelect < 0) {
-		console.log(`I am not able to sell you ${custSelect} cones, I only have ${allCones}`);
-	} else if (allCones - custSelect === 0) {
-		console.log("Yay! I've sold all my cones");
-		break;
-	}
-} while(allCones !== 0);
+// 	var allCones = Math.floor(Math.random() * 50) + 50;
+// 	console.log(allCones);
+// 	var custSelect = Math.floor(Math.random() * 5) + 1;
+// do {
+// 	if(allCones - custSelect > 0) {
+// 		console.log(`Selling ${custSelect} Cones`);
+// 		allCones = allCones - custSelect;
+// 		console.log(`We now have ${allCones} cones left`);
+// 	} else if(allCones - custSelect < 0) {
+// 		console.log(`I am not able to sell you ${custSelect} cones, I only have ${allCones}`);
+// 		continue;
+// 	} else if (allCones - custSelect === 0) {
+// 		console.log("Yay! I've sold all my cones");
+// 		break;
+// 	}
+// } while(allCones !== 0);
+function getStartingCones() {
+	return Math.floor(Math.random() * 50) + 50;
+}
+function getWantedCones() {
+	return Math.floor(Math.random() * 5) + 1;
+}
+function conesLogicMessage(wantedCones, conesToSell){
 
+}
+function sellIceCreamCones(conesToSell) {
+	do{
+		var wantedCones = getWantedCones();
+		if(wantedCones > conesToSell) {
+			console.log(`I'm sorry, you wanted ${wantedCones} cones, but we only have ${conesToSell} cones left.`);
+			continue;
+		} else if(wantedCones < conesToSell){
+
+		}
+
+	}
+
+}
+sellIceCreamCones(getStartingCones());
 
 //Exercises need completion
 //House keeping, .js files in js directory. html on root
