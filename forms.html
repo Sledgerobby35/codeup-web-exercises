@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Register With Us</title>
+    </head>
+    <body>
+        <form method="POST" action="https://request-inspector.glitch.me">
+            <div>
+                <label for="email">Email:</label>
+                <input id="email" name="UserEmail" type="email" placeholder="Email">
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input id="password" name="password" type="password"
+                       placeholder="Password">
+            </div>
+            <div>
+                <label for="bio">Bio:</label>
+                <textarea id="bio" name="bio" height="75px" width="150"
+                          placeholder="Tell us about yourself"></textarea>
+            </div>
+            <div>
+                <h3>How did you hear about us?</h3>
+                <input id="option1" name="question1" type="radio">
+                <label for="option1">Billboard</label>
+                <input id="option2" name="question2" type="radio">
+                <label for="option2">Radio Advertisement</label>
+            </div>
+            <div>
+                <input id="option3" name="question3" type="radio">
+                <label for="option3">Internet Advertisement</label>
+                <input id="option4" name="question4" type="radio">
+                <label for="option4">Other</label>
+            </div>
+            <div>
+                <button>Submit</button>
+            </div>
+        </form>
+    </body>
+</html>
