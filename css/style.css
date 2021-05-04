@@ -1,4 +1,55 @@
+html{
+    background-color: #F4CACC;
+    background-image: url("../img/background.jpg");
+    background-size: 2750px;
+}
 .fancy-header {
     color: purple;
     text-decoration: underline;
+}
+#main-header, #header-sentence{
+    text-align: center;
+    font-family: SansSerif;
+}
+.sub-header{
+    color: #FF0000;
+    text-decoration: underline;
+    font-family: 'Tangerine', cursive;
+    font-size: 35px;
+}
+body{
+     font-family: 'Indie Flower', cursive;
+}
+ul>li{
+    margin: 0;
+    padding: 6px 0 6px 60px;
+    list-style: none;
+    background-image: url("../img/bulletPoint.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 40px;
+}
+table{
+    font-size: 20px;
+}
+td{
+    padding: 5px 5px;
+}
+#finale>em{
+    font-size: 20px;
+}
+footer{
+    font-size: 20px;
+}
+a:visited{
+    color: #800080;
+}
+a:link{
+    color: #0000FF;
+}
+a:hover{
+    color: #00FF00;
+}
+a:active{
+    color: #FF0000;
 }
