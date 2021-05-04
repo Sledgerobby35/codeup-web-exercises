@@ -8,3 +8,15 @@ property: descriptor;
 property: descriptor;
 }
  */
+a:link{
+    color: #0000FF; /* Blue */
+}
+a:visited{
+    color: #00FF00; /* Green */
+}
+a:hover{
+    color: #FF0000; /* Red*/
+}
+a:active{
+    color: #800080; /* Purple */
+}
