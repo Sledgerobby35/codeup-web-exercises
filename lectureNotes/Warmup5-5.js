@@ -6,4 +6,10 @@ function last(input) {
 		return "Please input a string";
 	}
 }
+
+let last = (input) => {
+	return input
+		.split("")
+		.pop();
+}
 console.log(last(""));
