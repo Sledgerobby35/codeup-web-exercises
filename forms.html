@@ -3,34 +3,45 @@
     <head>
         <meta charset="UTF-8">
         <title>Register With Us</title>
+        <link rel="stylesheet" href="css/formsStyle.css" type="text/css">
     </head>
     <body>
+        <div class="form">
         <form method="POST" action="https://request-inspector.glitch.me">
-            <div>
-                <label for="email">Email:</label>
-                <input id="email" name="UserEmail" type="email" placeholder="Email">
-            </div>
-            <div>
-                <label for="password">Password:</label>
-                <input id="password" name="password" type="password"
-                       placeholder="Password">
-            </div>
-            <div>
-                <label for="bio">Bio:</label>
-                <textarea id="bio" name="bio" height="75px" width="150"
-                          placeholder="Tell us about yourself"></textarea>
-            </div>
+            <header>
+                <div>
+                    <label for="email">Email:</label>
+                    <input id="email" name="UserEmail" class="login" type="email"
+                           placeholder="Email">
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input id="password" name="password" class="login" type="password"
+                           placeholder="Password">
+                </div>
+                <div>
+                    <label for="bio">Bio:</label>
+                    <textarea id="bio" name="bio" class="login" height="75px"
+                              width="150"
+                              placeholder="Tell us about yourself"></textarea>
+                </div>
+            </header>
             <div>
                 <h3>How did you hear about us?</h3>
-                <input id="option1" name="question1" type="radio" value="Billboard">
+                <input id="option1" class="radioQuest" name="question1" type="radio"
+                       value="Billboard">
                 <label for="option1">Billboard</label>
-                <input id="option2" name="question2" type="radio">
+            </div>
+            <div>
+                <input id="option2" class="radioQuest" name="question2" type="radio">
                 <label for="option2">Radio Advertisement</label>
             </div>
             <div>
-                <input id="option3" name="question3" type="radio">
+                <input id="option3" class="radioQuest" name="question3" type="radio">
                 <label for="option3">Internet Advertisement</label>
-                <input id="option4" name="question4" type="radio">
+            </div>
+            <div>
+                <input id="option4" class="radioQuest" name="question4" type="radio">
                 <label for="option4">Other</label>
             </div>
             <div>
@@ -50,5 +61,6 @@
                 <button>Submit</button>
             </div>
         </form>
+        </div>
     </body>
 </html>
