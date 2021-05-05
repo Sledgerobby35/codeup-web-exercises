@@ -1,0 +1,24 @@
+#element-rectangle{
+    border: 6px solid #FFFFFF;
+}
+#now-box{
+    border: 6px solid #FFFFFF;
+    height: 100px;
+    width: 400px;
+    margin: 5px 20px 15px 3px;
+    padding: 20px;
+}
+p, ul{
+    border: 2px solid #FFFFFF;
+    padding: 10px;
+}
+li{
+    border: 2px solid blue;
+    padding: .5em;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+ul{
+    list-style: none;
+    display: flex;
+}
