@@ -31,7 +31,8 @@ fieldset {
 
 .form-group {
     width: 100%;/* This element must use 100% of the width */
-    margin: .5em 0em;/* It should have a separation of .5em from elements on top of it and below it*/
+    margin-top: .5em;/* It should have a separation of .5em from elements on top of it and below it*/
+    margin-bottom: .5em;
 }
 
 .form-label {
@@ -51,8 +52,10 @@ fieldset {
 }
 
 .form-control {
-    padding: 4px 0px;/* There must be 4px on top of the text and below the text of an input with this class */
-    margin: .5em 0em;/* It should have a separation of .5em from elements on top of it and below it */
+    padding-top: 4px;/* There must be 4px on top of the text and below the text of an input with this class */
+    padding-bottom: 4px;
+    margin-top: .5em;/* It should have a separation of .5em from elements on top of it and below it */
+    margin-bottom
 
     /* You'll need to use the `calc` function to make the width of this element match the width of the button */
     /* See the example at: https://developer.mozilla.org/en-US/docs/Web/CSS/calc */
