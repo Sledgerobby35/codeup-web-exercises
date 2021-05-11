@@ -1,0 +1,13 @@
+/*Media Queries*/
+/*Syntax*/
+
+@media screen and (min-width: 606px){
+    body {
+        background-color: #3366ff;
+    }
+}
+@media screen and (max-width: 800px) and (max-width: 1000px){
+    body{
+        background-color: #ff0000;
+    }
+}
