@@ -1,7 +1,22 @@
+/*Nav Bar*/
 nav{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
 }
 nav > ul{
+    padding: 0;
     list-style: none;
-    flex-direction: row;
+    display: flex;
+}
+li{
+    padding: 0 .5em;
+    justify-content: space-between;
+}
+/*Header*/
+header, h1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
