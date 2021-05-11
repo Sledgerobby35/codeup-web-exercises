@@ -25,19 +25,19 @@ showMulitplcationTable(7)
 // }
 // evenOrOdd();
 
-// function constructNum(num){
-// 	var total = 0;
-// 	for(let i = 0; i < num; i++) {
-// 		total = total + num * Math.pow(10,i);
-// 	}
-// 	console.log(total);
-// }
-// function countUp() {
-// 	for(let i = 1; i <= 9; i++){
-// 		constructNum(i);
-// 	}
-// }
-// countUp();
+function constructNum(num){
+	var total = 0;
+	for(let i = 0; i < num; i++) {
+		total = total + num * Math.pow(10,i);
+	}
+	console.log(total);
+}
+function countUp() {
+	for(let i = 1; i <= 9; i++){
+		constructNum(i);
+	}
+}
+//countUp();
 
 
 function countDown(){
@@ -45,4 +45,4 @@ function countDown(){
 		console.log(i);
 	}
 }
-countDown();
+//countDown();
