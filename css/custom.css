@@ -1,0 +1,14 @@
+.container{
+    background-image: url("../img/pizzaBackground.png");
+}
+.jumbotron{
+    padding: 4rem 0;
+}
+h1{
+    text-align: center;
+    background-color: white;
+    opacity: .6;
+}
+mb-4{
+    margin-bottom: 2rem;
+}
