@@ -37,7 +37,7 @@ function countUp() {
 		constructNum(i);
 	}
 }
-//countUp();
+countUp();
 
 
 function countDown(){
