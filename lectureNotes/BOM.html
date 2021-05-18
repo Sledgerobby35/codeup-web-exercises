@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>BOM Lecture Notes</title>
+    </head>
+    <body>
+        <h1>BOM Lecture</h1>
+
+        <script>
+			var num = 3;
+            (function(){
+            	"use strict";
+            	// var funcNum = 5;
+            	// window.open();
+            	// window.onload = function(){
+            	// 	alert("Your window has loaded");
+                // };
+            	// console.log(screen.height);
+				// console.log(window.location);
+				// var interval = setInterval(function() {
+				// 	alert("hello");
+                // }, 5000);
+				// window.clearInterval(interval);
+				// window.setTimeout()
+                function showTime() {
+                	let dateTime = new Date();
+                	let time = dateTime.toLocaleTimeString();
+                	console.log(time);
+                }
+                var clear = setInterval(showTime, 5000);
+                clearInterval(clear);
+			})();
+        </script>
+    </body>
+</html>
