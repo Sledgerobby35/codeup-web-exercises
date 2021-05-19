@@ -1,0 +1,15 @@
+#border-blue{
+    border: 5px solid #0000ff;
+}
+.border-green{
+    border: 5px solid #00ff00;
+}
+.border-red{
+    border: 5px solid #ff0000;
+}
+.background-blue{
+    background-color: #0000ff;
+}
+.color-darkGreen{
+    color: #006400;
+}
