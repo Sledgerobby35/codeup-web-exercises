@@ -37,7 +37,52 @@
 // firstBlue.setAttribute("class", "col-3");
 //STYLE ELEMENTS
 
-let greenBorder = document.getElementsByClassName("border-green")[0];
-console.log(greenBorder);
+// let greenBorder = document.getElementsByClassName("border-green")[0];
+// console.log(greenBorder);
+//
+// greenBorder.style.border = "4px solid #f0f0f0";
+// let newEl = document.createElement("p");
+// console.log(newEl);
 
-greenBorder.style.border = "4px solid #f0f0f0";
+// let pizzaForm = document.getElementsByClassName("pizza")
+function changeList() {
+	let exisDiv = document.getElementsByTagName("body")[0];
+	console.log(exisDiv);
+	let newDiv = document.createElement("div");
+	newDiv.innerText = "List Number 2";
+	let newChild = document.createElement("ul");
+	for (let i = 0; i < 5; i++) {
+		let child = document.createElement("li");
+		child.setAttribute("id", `li${i + 1}`);
+		child.innerText = `List Item ${i + 1}`;
+		newChild.appendChild(child);
+	}
+	newDiv.appendChild(newChild);
+	exisDiv.appendChild(newDiv);
+}
+
+let newDiv = document.createElement("div");
+console.log(newDiv);
+newDiv.innerText = 'This is a brand new Div';
+console.log(newDiv);
+// newDiv.innerText = " ";
+// console.log(newDiv);
+//Grady Example
+var newEl = document.createElement('ul');
+
+newEl.setAttribute('class', 'pizza');
+for (let i = 0; i < 5; i++) {
+	let smallEl = document.createElement('li');
+	smallEl.setAttribute('id', `li${i + 1}`);
+	smallEl.innerText = `List item ${i + 1}`;
+	newEl.appendChild(smallEl);
+}
+let button = document.getElementById("myBtn")
+	.addEventListener("click", removeChild);
+
+function removeChild() {
+	let deleteItem = document.querySelector("#foodList");
+	console.log(deleteItem);
+	let item = document.getElementById("pizza");
+	deleteItem.removeChild(item);
+}
