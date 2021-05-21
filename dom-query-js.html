@@ -26,42 +26,92 @@
         </p>
         <div class="container-fluid">
             <div class="row" id="row">
-<!--                <button class="col-3" id="btn1">1</button>-->
-<!--                <button class="col-3" id="btn2">2</button>-->
-<!--                <button class="col-3" id="btn3">3</button>-->
-<!--                <button class="col-3" id="btn4">4</button>-->
+                <button class="col-3" id="btn1">1</button>
+                <button class="col-3" id="btn2">2</button>
+                <button class="col-3" id="btn3">3</button>
+                <button class="col-3" id="btn4">4</button>
             </div>
         </div>
 
         <script>
 			(function () {
-			// 	function eventListeners() {
-			// 		for (let x = 1; x < 5; x++) {
-			// 			let btn = document.createElement("button");
-			// 			btn.innerText = `${x}`;
-			// 			btn.setAttribute("id", `btn${x}`);
-			// 			document.getElementById("row").appendChild(btn);
-			// 		}
-			// 	}
-			// 	function buttonChange(){
-			// 		for(let i = 1; i < 5; i++){
-			// 			let btn = document.getElementById(`btn${i}`)
-            //             if(i === 1){
-            //             	btn.addEventListener("click", changeMainHeader);
-            //             } else if(i === 2){
-            //             	btn.addEventListener("click", changeSubHeader);
-            //             } else if(i === 3){
-            //             	btn.addEventListener("click", changeList);
-            //             } else if(i === 4){
-            //             	btn.addEventListener("click", changePars);
-            //             }
-            //         }
-            //     }
-            //     function allNow(){
-			// 		eventListeners();
-            //         buttonChange();
-            //     }
-            //     allNow();
+
+                function colorChange(){
+                	let result;
+					result = Math.floor(Math.random() * 10);
+					console.log(result);
+					switch(result){
+						case 1:
+							document.body.style.backgroundColor = "blue";
+							break;
+                        case 2:
+							document.body.style.backgroundColor = "green";
+							break;
+                        case 3:
+							document.body.style.backgroundColor = "grey";
+							break;
+                        case 4:
+							document.body.style.backgroundColor = "red";
+							break;
+                        case 5:
+							document.body.style.backgroundColor = "pink";
+							break;
+                        case 6:
+							document.body.style.backgroundColor = "orange";
+							break;
+                        case 7:
+							document.body.style.backgroundColor = "purple";
+							break;
+                        case 8:
+							document.body.style.backgroundColor = "yellow";
+							break;
+                        case 9:
+							document.body.style.backgroundColor = "gold";
+							break;
+                        case 10:
+							document.body.style.backgroundColor = "black";
+							break;
+                    }
+                }
+                function addEvent(){
+					let btns = document.getElementsByTagName("button");
+					for(let i = 0; i < btns.length-1; i++){
+						btns[i].onclick = colorChange;
+                    }
+                }
+				// function eventListeners() {
+				// 	for (let x = 1; x < 5; x++) {
+				// 		let btn = document.createElement("button");
+				// 		btn.innerText = `${x}`;
+				// 		btn.setAttribute("id", `btn${x}`);
+				// 		document.getElementById("row").appendChild(btn);
+				// 	}
+				// }
+
+				function allNow() {
+                	addEvent();
+                    colorChange();
+                }
+                allNow();
+				// function buttonChange(){
+				// 	for(let i = 1; i < 5; i++){
+				// 		let btn = document.getElementById(`btn${i}`)
+                //         if(i === 1){
+                //         	btn.addEventListener("click", changeMainHeader);
+                //         } else if(i === 2){
+                //         	btn.addEventListener("click", changeSubHeader);
+                //         } else if(i === 3){
+                //         	btn.addEventListener("click", changeList);
+                //         } else if(i === 4){
+                //         	btn.addEventListener("click", changePars);
+                //         }
+                //     }
+                // }
+                // function allNow(){
+				// 	eventListeners();
+                //     buttonChange();
+                // }
+                // allNow();
 			// // 	function eventListeners(){
 			// 		document.getElementById("btn1")
             //             .addEventListener("click", changeMainHeader);
