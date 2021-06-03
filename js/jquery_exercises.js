@@ -9,8 +9,21 @@
 // let listContent = $("#list-item").html();
 // alert(listContent);
 // $(".codeup").css("border", "1px solid red");
-$("li").css("font-size", "20px");
+// $("li").css("font-size", "20px");
 // $("h1").css("background-color", "rgba(255,255,102,0.5)");
 // $("p").css("background-color", "rgba(255,255,102,0.5)");
 // $("li").css("background-color", "rgba(255,255,102,0.5)");
-$("h1, p, li").css("background-color", "rgba(255,255,102,0.5)");
+$("h1").click(function(){
+	$("h1").css("background-color", "blue");
+});
+$("p").dblclick(function (){
+	$("p").css("font-size", "18px")
+});
+$("li").hover(
+	function(){
+		$("ul > li").css("color", "red");
+	},
+	function(){
+		$("ul > li").css("color", "black");
+	}
+)
