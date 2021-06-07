@@ -21,9 +21,9 @@ $("p").dblclick(function (){
 });
 $("li").hover(
 	function(){
-		$("ul > li").css("color", "red");
+		$(this).css("color", "red");
 	},
 	function(){
-		$("ul > li").css("color", "black");
+		$(this).css("color", "black");
 	}
 )
