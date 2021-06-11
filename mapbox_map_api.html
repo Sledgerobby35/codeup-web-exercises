@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet"
+              href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css"
+              type="text/css">
+        <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css"
+              rel="stylesheet"/>
+        <title>MapBox Map API</title>
+    </head>
+    <body>
+        <div id="map" style="height: 675px; width: 1200px"></div>
+        <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
+        <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js"></script>
+        <script>
+			// const mapboxToken = 'pk.eyJ1IjoicmVsb3J0MzUiLCJhIjoiY2twcG9kdmMwMjlzMzMxbnk2a3IxbTM3eiJ9.QXAAIgqF4AJgT2TAURwGsw';
+            // //<-------------_Setting Map_------------>
+			// mapboxgl.accessToken = mapboxToken;
+			// var map = new mapboxgl.Map( {
+			// 	container: 'map',
+			// 	style: 'mapbox://styles/mapbox/satellite-streets-v11',
+			// 	center: [-97.6880, 30.2184],
+			// 	zoom: 17
+			// });
+            //
+			// let geocoder = setGeocoder();
+			// addGeocoderToMap(geocoder);
+            //
+			// function addGeocoderToMap(geocoder){
+			// 		map.addControl(geocoder);
+			// 	}
+            //
+			// function addGeocoderEvent(geocoder){
+			// 	geocoder.on("result", function(event){
+			// 		marker.setLngLat(event.result);
+			// 		return event.result;
+			// 	})
+			// }
+			// function setGeocoder(){
+			// 	return new MapboxGeocoder({
+			// 		accessToken: mapboxgl.accessToken,
+			// 		mapboxgl: mapboxgl,
+			// 		marker: false
+			// 	})
+			// }
+			//const mapboxToken = 'pk.eyJ1IjoiYW1hZG9henVhMyIsImEiOiJja3BwbmF6Z3kwZm5uMm9vM3UxN3NlZDhxIn0.A1NW3gQvtIoSPBYC9YJVxg';
+			mapboxgl.accessToken = MAPBOX_TOKEN;
+			var map = new mapboxgl.Map({
+				container: 'map',
+				style: 'mapbox://styles/mapbox/satellite-streets-v11',
+				center: [-95.6963, 30.3883],
+				zoom: 13
+			})
+			// call function to create method and give initial point
+			// let marker = getMarker([-95.6963, 30.3883]);
+			let marker;
+			// call addMapEvent AFTER the marker has been initially set
+			addMapEvent();
+			// create new geocoder and assign to variable
+			let geocoder = setGeocoder();
+			addGeocoderToMap(geocoder);
+			setPopup("Thai Wok In");
+			// creates and returns a new GeoCoder (search box)
+			function setGeocoder() {
+				return new MapboxGeocoder({
+					accessToken: mapboxgl.accessToken,
+					mapboxgl: mapboxgl,
+					marker: false
+				})
+			}
+			// adds event listener to geocoder and sets new marker location
+			function addGeocoderToMap(geocoder) {
+				map.addControl(geocoder);
+				geocoder.on('result', function (event) {
+					console.log(event);
+					if(marker){
+						marker.remove();
+					}
+					getMarker(event.result.geometry.coordinates).setPopup(getPopup(event.result.place_name));
+				})
+			}
+			// creates the marker
+			function getMarker(point) {
+				return new mapboxgl.Marker().setLngLat(point).addTo(map);
+			}
+			// adds event to map that changes location of marker based
+			// on where the user clicks
+			function addMapEvent() {
+				map.on('click', function (event) {
+					console.log(event.lngLat);
+					if(!marker){
+						marker =
+                            getMarker(event.lngLat);
+					}else{
+						marker.setLngLat(event.lngLat);
+					}
+				})
+			}
+			function getPopup(textDetails) {
+				return new mapboxgl.Popup().setHTML(`<p>${textDetails}</p>`).addTo(map);
+			}
+        </script>
+    </body>
+</html>
